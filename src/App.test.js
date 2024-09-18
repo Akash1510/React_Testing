@@ -1,16 +1,21 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import {render,screen } from '@testing-library/react'
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+import App from './App'
+
+// New test function for the React Component
+// 1 > test case for the text checking on the screen
 
 
-test('renders learn react logo',()=>{
-  render(<App/>);
-  const logoElement=screen.getByAltText(/logo/i);
-  expect(logoElement).toBeInTheDocument();
-})
+test('Check the Text', () => { 
+  render(<App/>)
+  const textElement = screen.getByText(/Hey I Am Akash/i)
+  expect(textElement).toBeInTheDocument();
+ })
 
+ test('Now for the test 2',
+  ()=>{
+    render(<App/>)
+    const text = screen.getByText(/Not to Anything/)
+    expect(text).toBeInTheDocument()
+    }
+ )
