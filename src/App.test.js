@@ -15,7 +15,7 @@ test('Check the Text', () => {
  test('Now for the test 2',
   ()=>{
     render(<App/>)
-    const text = screen.getByText(/Not to Anything/)
+    const text = screen.getByText(/Not to Anything/i)
     expect(text).toBeInTheDocument()
     }
  )
