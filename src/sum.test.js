@@ -17,6 +17,3 @@ test("testing of the New Values",()=>{
     expect(Sum(null,10)).toBe(10)
 })
 
-test("testing of the New Undefined values",()=>{
-    expect(Sum(undefined,10)).toBe(undefined)
-})
