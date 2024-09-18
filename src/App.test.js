@@ -19,3 +19,11 @@ test('Check the Text', () => {
     expect(text).toBeInTheDocument()
     }
  )
+
+ test("to Check the Leaf Title" 
+  ,()=>{
+    render(<App/>)
+    const title = screen.getByTitle(/this is leaf/i)
+    expect(title).toBeInTheDocument()
+  }
+ )
