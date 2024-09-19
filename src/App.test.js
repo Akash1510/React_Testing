@@ -75,7 +75,7 @@ describe("UI Component testing",
     expect(CheckInputBox).toBeInTheDocument()
   })
 
-  test("Case 2 for the Component",()=>{
+  test("Case 2 For the Component",()=>{
     render(<App/>)
     const nameplace = screen.getByRole(/textbox/i)
     expect(nameplace).toHaveAttribute('name','Doctor')
