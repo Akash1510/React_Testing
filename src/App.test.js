@@ -95,3 +95,15 @@ describe("Api testing test cases",()=>{
     expect(placeholder).toBeInTheDocument()
   })
 })
+
+
+// Now use the .only function -> that only one test case is excuted
+
+describe.only("Comonent Checking",()=>{
+  test("Check Input Field",()=>{
+    render(<App/>)
+    const inputfied = screen.getByRole('textbox')
+    expect(inputfied).toBeInTheDocument();
+
+  })
+})
