@@ -55,12 +55,43 @@ test("check that placeholder is present or not", () => {
 
 // to check the name attribute
 
-test("Check the Attributes in the testbox",()=>{
+test("Check the Attributes in the testbox", () => {
   render(<App />)
 
   const nameplace = screen.getByRole(/textbox/)
-  expect(nameplace).toHaveAttribute("name","Doctor")
+  expect(nameplace).toHaveAttribute("name", "Doctor")
   // check for the id is present or not
-  expect(nameplace).toHaveAttribute("id","name")
-  expect(nameplace).toHaveAttribute('class','local')
+  expect(nameplace).toHaveAttribute("id", "name")
+  expect(nameplace).toHaveAttribute('class', 'local')
+})
+
+// Now use the Describe function
+
+describe("UI Component testing",
+()=>{
+  test("Case 1 for the component",()=>{
+    render(<App />)
+    const CheckInputBox = screen.getByRole(/textbox/i)
+    expect(CheckInputBox).toBeInTheDocument()
+  })
+
+  test("Case 2 for the Component",()=>{
+    render(<App/>)
+    const nameplace = screen.getByRole(/textbox/i)
+    expect(nameplace).toHaveAttribute('name','Doctor')
+  })
+
+})
+
+describe("Api testing test cases",()=>{
+  test("CASE 1 FOR THE API TEST CASE1",()=>{
+    render(<App/>)
+      const fieldId = screen.getByRole(/textbox/i)
+      expect(fieldId).toHaveAttribute('id','name')
+  })
+  test('case 2 for api testing',()=>{
+    render(<App/>)
+    const placeholder = screen.getByPlaceholderText(/Enter your Name/i)
+    expect(placeholder).toBeInTheDocument()
+  })
 })
