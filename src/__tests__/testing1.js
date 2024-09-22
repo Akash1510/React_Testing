@@ -1,6 +1,6 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen ,fireEvent} from '@testing-library/react'
+import App from '../App'
 
-import App from './App'
 
 // New test function for the React Component
 // 1 > test case for the text checking on the screen
@@ -108,3 +108,14 @@ describe("Api testing test cases",()=>{
 //   })
 // })
 
+
+
+// onclick event test case
+
+test("Check the Click event",()=>{
+  render(<App/>)
+  const btn = screen.getByRole('button')
+  fireEvent.click(btn)
+  expect(screen.getByText("Rahul")).toBeInTheDocument();
+  
+})

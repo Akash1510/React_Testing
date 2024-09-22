@@ -1,4 +1,4 @@
-import Sum from "./sum";
+import Sum from "../sum";
 
 
 // create the .js file and then import into the 
