@@ -10,9 +10,9 @@ import App from "../App";
 // })
 
 // Now use the BeforeEach Hook ->Excution Depends on the No of Testcases that time it excutes
-beforeEach(()=>{
-    console.log("___________Before Each Is Excuted __________")
-})
+// beforeEach(()=>{
+//     console.log("___________Before Each Is Excuted __________")
+// })
 
 test('Check this test case', () => {
     render(<App />)
@@ -31,9 +31,14 @@ test('Check this test case 3', () => {
 })
 test('Check this test case 4', () => {
     render(<App />)
+    console.log("Before all four done")
     const text = screen.getByText(/Hey I Am Akash/i)
     expect(text).toBeInTheDocument()
 })
 
 
 
+// AfterAll Use ->Excution only one time after all test cases run
+afterAll(()=>{
+    console.log("_________Execution of AfterAll_______")
+})
