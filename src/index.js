@@ -4,14 +4,18 @@ import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import Func from './Func';
-import GetByRole from './RTL Query/GetByRole';
+// import GetByRole from './RTL Query/GetByRole';
+import QueryByText from './QueryBY/QueryByText';
+import FindByText from './FindBy/FindByText';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <Func/> */}
-    <GetByRole/>
+    {/* <GetByRole/> */}
+    {/* <QueryByText/> */}
+    <FindByText/>
   </React.StrictMode>
 );
 
