@@ -10,6 +10,7 @@ const GetTestId = () => {
             <div data-testid="div-test-id">Test Content2</div>;
             <div data-testid="div-test-id">Test Content3</div>;
             <div data-testid="div-test-id">Test Content4</div>;
+            <div id ='local'>Hi My Brother</div>
             <h2>
                 h2 tag
             </h2>
